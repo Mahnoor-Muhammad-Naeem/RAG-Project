@@ -1,0 +1,45 @@
+# RAG Project Configuration
+
+# Paths
+paths:
+  data_raw: "../data/raw"
+  data_processed: "../data/processed"
+  data_embeddings: "../data/embeddings"
+
+# Document Processing
+document_processing:
+  chunk_size: 1000
+  chunk_overlap: 200
+  supported_file_types:
+    - pdf
+    - txt
+    - docx
+    - html
+
+# Embedding Configuration
+embeddings:
+  model: "sentence-transformers/all-MiniLM-L6-v2"
+  vector_dimensions: 384
+  vector_db: "chromadb"  # Options: faiss, chromadb, milvus
+  
+# Retrieval Configuration
+retrieval:
+  top_k: 5
+  similarity_threshold: 0.7
+  use_reranker: false
+  reranker_model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+
+# LLM Configuration
+llm:
+  model: "gpt-3.5-turbo"
+  temperature: 0.3
+  max_tokens: 500
+  system_prompt: "You are a helpful assistant that answers questions based on the provided context. If the context doesn't contain the answer, say you don't know."
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  cors_origins:
+    - "http://localhost:3000"
+    - "http://127.0.0.1:3000" 

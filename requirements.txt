@@ -1,0 +1,30 @@
+# Core dependencies
+langchain>=0.1.0
+openai>=1.0.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Document processing
+PyPDF2>=3.0.0
+docx2txt>=0.8
+python-pptx>=0.6.21
+beautifulsoup4>=4.12.0
+
+# Embedding and vector storage
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+chromadb>=0.4.0
+
+# Web and API
+fastapi>=0.100.0
+uvicorn>=0.22.0
+pydantic>=2.0.0
+
+# Utilities
+tqdm>=4.65.0
+python-dotenv>=1.0.0
+pytest>=7.3.0
+
+# Notebooks
+jupyter>=1.0.0
+ipywidgets>=8.0.0 
